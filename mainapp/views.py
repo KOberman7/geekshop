@@ -4,9 +4,9 @@ from django.conf import settings
 from django.core.cache import cache
 from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 from django.shortcuts import render, get_object_or_404
-from django.template.defaultfilters import title
 
 from basketapp.models import Basket
+from mainapp.management.commands.fill import load_from_json
 from mainapp.models import ProductCategory, Product
 from django.views.decorators.cache import cache_page
 
@@ -47,13 +47,11 @@ def products(request, pk=None, page=1):
 
     if pk:
         if pk == '0':
-            ...
             products = get_products_orederd_by_price()
         else:
             category = get_category(pk)
             products = get_products_in_category_orederd_by_price(pk)
 
-        ...
     hot_product = get_hot_product()
     same_products = get_same_products(hot_product)
 
@@ -178,9 +176,9 @@ def get_product(pk):
         return get_object_or_404(Product, pk=pk)
 
 
-def get_products_orederd_by_price():
+def get_products_oredered_by_price():
     if settings.LOW_CACHE:
-        key = 'products_orederd_by_price'
+        key = 'products_oredered_by_price'
         products = cache.get(key)
         if products is None:
             products = Product.objects.filter(is_active=True, category__is_active=True).order_by('price')
@@ -190,9 +188,9 @@ def get_products_orederd_by_price():
         return Product.objects.filter(is_active=True, category__is_active=True).order_by('price')
 
 
-def get_products_in_category_orederd_by_price(pk):
+def get_products_in_category_oredered_by_price(pk):
     if settings.LOW_CACHE:
-        key = f'products_in_category_orederd_by_price_{pk}'
+        key = f'products_in_category_oredered_by_price_{pk}'
         products = cache.get(key)
         if products is None:
             products = Product.objects.filter(category__pk=pk, is_active=True, category__is_active=True).order_by(

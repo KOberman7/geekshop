@@ -16,7 +16,6 @@
           {% if products.has_previous %}
             <a href="{% url 'products:page'
                              category.pk products.previous_page_number %}">
-              <
             </a>
           {% endif %}
           <span class="current">
@@ -26,9 +25,11 @@
           {% if products.has_next %}
             <a href="{% url 'products:page'
                              category.pk products.next_page_number %}">
-              >
             </a>
           {% endif %}
+        <div>
+      <div>
+    <div>
 
     <div class="products_list">
       <div class="title clearfix">
@@ -64,12 +65,8 @@
               </a>
             </div>
           {% endfor %}
-</div>
-
-      </div>
     </div>
-  </div>
 
-  <div class="clr"></div>
+        <div class="clr"></div>
 
 {% endblock %}

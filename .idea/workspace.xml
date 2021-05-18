@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7315aaac-774b-485a-8dfb-199530d690e6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/products_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/templates/mainapp/includes/products_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mainapp/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mainapp/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +194,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621249442516</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="uuhhhh">
+      <created>1621249666551</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1621249666551</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="UnknownFeatures">
@@ -234,6 +242,7 @@
     <MESSAGE value="first-sec commit" />
     <MESSAGE value="last(i hope) commit" />
     <MESSAGE value="last(i hope, again) commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="last(i hope, again) commit" />
+    <MESSAGE value="uuhhhh" />
+    <option name="LAST_COMMIT_MESSAGE" value="uuhhhh" />
   </component>
 </project>

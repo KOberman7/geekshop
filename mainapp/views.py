@@ -11,12 +11,6 @@ from mainapp.models import ProductCategory, Product
 from django.views.decorators.cache import cache_page
 
 
-# def get_basket(user):
-#     if user.is_authenticated:
-#         return Basket.objects.filter(user=user)
-#     return []
-
-
 def get_hot_product():
     products = get_products()
 
@@ -39,6 +33,7 @@ def main(request):
     }
 
     return render(request, 'mainapp/index.html', content)
+
 
 @cache_page(3600)
 def products(request, pk=None, page=1):
